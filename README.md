@@ -77,13 +77,15 @@ uv run deeppoker
 发布新版本到 PyPI（维护者使用）：
 
 ```bash
-# 1. 更新 pyproject.toml 中的 version
-# 2. 更新 deeppoker/__init__.py 中的 __version__
-# 3. 提交更改
-git add . && git commit -m "Bump version to x.x.x"
+# 1. 更新版本（使用 uv version 命令）
+uv version --bump patch  # 或 minor/major
 
-# 4. 打 tag 并推送
-git tag vx.x.x
+# 2. 提交更改
+git add pyproject.toml uv.lock
+git commit -m "Bump version to $(uv version --short)"
+
+# 3. 打 tag 并推送
+git tag v$(uv version --short)
 git push && git push --tags
 ```
 

@@ -11,7 +11,9 @@ Usage:
     from deeppoker.agents import BaseAgent, RandomAgent
 """
 
-__version__ = "0.1.1"
+from importlib.metadata import version
+
+__version__ = version("deeppoker")
 __codename__ = "R1"  # Reasoning v1
 
 from deeppoker.core.card import Card, Deck
