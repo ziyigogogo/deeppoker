@@ -1,6 +1,6 @@
 [project]
 name = "deeppoker"
-version = "0.1.0"
+version = "0.1.1"
 description = "DeepPoker R1 - A Texas Hold'em poker game engine with FastAPI WebSocket server and AI agent framework"
 authors = [
     {name = "Ziyi", email = "ziyigogogo@gmail.com"}

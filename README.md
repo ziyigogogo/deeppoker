@@ -72,6 +72,23 @@ uv run deeppoker
 - `BaseAgent` - Abstract base class for AI agents
 - `RandomAgent` - Random action agent for testing
 
+## Publishing
+
+发布新版本到 PyPI（维护者使用）：
+
+```bash
+# 1. 更新 pyproject.toml 中的 version
+# 2. 更新 deeppoker/__init__.py 中的 __version__
+# 3. 提交更改
+git add . && git commit -m "Bump version to x.x.x"
+
+# 4. 打 tag 并推送
+git tag vx.x.x
+git push && git push --tags
+```
+
+GitHub Actions 会自动构建并发布到 PyPI。
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
